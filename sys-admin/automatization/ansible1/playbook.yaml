@@ -1,0 +1,7 @@
+- hosts: ansible71
+  become: yes
+  tasks:
+        - name: Install the package "tree"
+          ansible.builtin.apt:
+            name: tree
+        - name: 

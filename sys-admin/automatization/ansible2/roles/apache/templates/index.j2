@@ -1,0 +1,6 @@
+Hostname: {{ ansible_facts['hostname'] }} <br>
+OS: {{ ansible_os_family }} <br>
+IP: {{ ansible_all_ipv4_addresses }} <br>
+CPU: {{ ansible_processor }} <br>
+RAM: {{ ansible_memtotal_mb }} <br>
+HDD: {{ ansible_facts['devices']['sda']['size'] }} <br>

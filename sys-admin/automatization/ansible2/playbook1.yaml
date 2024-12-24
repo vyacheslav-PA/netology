@@ -1,0 +1,13 @@
+- hosts: ansible72
+  tasks:
+         - name: Ping hosts
+           ansible.builtin.ping:
+         - name: Download kafka.tgz
+           ansible.builtin.get_url:
+             url: https://dlcdn.apache.org/kafka/3.9.0/kafka-3.9.0-src.tgz
+             dest: /home/ubuntu/kafka.tgz
+         - name: Extract kafka.tgz
+           ansible.builtin.unarchive:  
+             src: /home/ubuntu/kafka.tgz
+             dest: /home/ubuntu/
+             remote_src: yes

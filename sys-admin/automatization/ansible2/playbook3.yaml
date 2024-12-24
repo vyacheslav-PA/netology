@@ -1,0 +1,10 @@
+- hosts: ansible72
+  become: yes
+  vars:
+    helloUbuntu: printf "a new line for motd"
+  tasks:
+  - name: Add a line to a file if the file does not exist, without passing regexp
+    ansible.builtin.lineinfile:
+      path: /etc/update-motd.d/00-header 
+      line: "{{ helloUbuntu }}"
+    

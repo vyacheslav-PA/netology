@@ -1,0 +1,7 @@
+---
+# tasks file for apache
+- hosts: ansible72
+  gather_facts: yes
+  become: yes
+  tasks:
+      - include_tasks: "{{ ansible_os_family }}.yaml"

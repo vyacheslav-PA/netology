@@ -1,0 +1,25 @@
+# Модифицируйте плейбук из пункта 3, задания 1. В качестве приветствия он должен установить IP-адрес и hostname управляемого хоста, пожелание хорошего дня системному администратору.
+- hosts: ansible72
+  gather_facts: yes
+  become: yes
+  vars:
+    scriptline1: '#!/bin/sh'
+    scriptline2: 'Пожелание хорошего дня системному администратору)'
+    pathfilesmotd: "/etc/update-motd.d"
+    pathnewfilemotd: "/etc/update-motd.d/01-newmotd"
+  tasks:
+  - name: change file permission #убрать права на исполнение дефолтных скриптов
+    ansible.builtin.file:
+      state: directory
+      recurse: yes
+      path: "{{ pathfilesmotd }}"
+      mode: -x
+  - name: Creating a script #создать файл скрипта приветствия
+    copy:
+      dest: "{{ pathnewfilemotd }}"
+      mode: 0774
+      content: |
+          {{ scriptline1 }}
+          echo '{{ scriptline2 }}'
+          echo 'имя хоста: {{ ansible_facts['hostname'] }}'
+          echo 'ip адрес хоста: {{ ansible_facts['default_ipv4']['address']}}'

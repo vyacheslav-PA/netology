@@ -1,0 +1,13 @@
+- hosts: ansible72
+  become: yes
+  tasks:
+        - name: Install tuned
+          ansible.builtin.apt:
+            name: tuned
+            state: present
+            update_cache: yes
+        - name: Start tuned
+          service:
+            name: tuned
+            state: started
+            enabled: true
