@@ -26,8 +26,7 @@
 
 ### Решение 1
 
-
-
+https://github.com/vyacheslav-PA/netology/commit/f67050d931fbaf50f315f70bf73539909e1ba31f
 
 
 --- 
