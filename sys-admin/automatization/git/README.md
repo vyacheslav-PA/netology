@@ -44,7 +44,7 @@ https://github.com/vyacheslav-PA/netology/commit/f67050d931fbaf50f315f70bf735399
 
 ### Решение 2
 
-
+https://github.com/vyacheslav-PA/netology/commit/74672f197d0b9a40a558aee2b44c25e47651fa2b
 ---
 
 ### Задание 3
