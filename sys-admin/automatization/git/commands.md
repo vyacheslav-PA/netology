@@ -23,3 +23,5 @@
     - git branch dev - создать ветку dev
 - git checkout dev - перейти на ветку dev
     - -b создать и перейти на созданную ветку
+- git merge (source) - слияние веток
+
