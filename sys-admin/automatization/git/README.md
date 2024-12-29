@@ -45,6 +45,7 @@ https://github.com/vyacheslav-PA/netology/commit/f67050d931fbaf50f315f70bf735399
 ### Решение 2
 
 https://github.com/vyacheslav-PA/netology/commit/74672f197d0b9a40a558aee2b44c25e47651fa2b
+
 ---
 
 ### Задание 3
@@ -69,6 +70,9 @@ https://github.com/vyacheslav-PA/netology/commit/74672f197d0b9a40a558aee2b44c25e
 
 ### Решение 3
 
+https://github.com/vyacheslav-PA/netology/network
+
+![network graph for merge](https://github.com/vyacheslav-PA/netology/blob/38eaae8ff574d57e0c3936a1325c4f9a992875eb/sys-admin/automatization/git/img/network-graph.png)
 
 ---
 ## Дополнительные задания* (со звёздочкой)
@@ -93,3 +97,5 @@ https://github.com/vyacheslav-PA/netology/commit/74672f197d0b9a40a558aee2b44c25e
 В качестве ответа на задание прикрепите ссылку на граф коммитов https://github.com/ваш-логин/ваш-репозиторий/network в ваш md-файл с решением.
 
 ### Решение 4*
+
+https://github.com/vyacheslav-PA/netology/network   
