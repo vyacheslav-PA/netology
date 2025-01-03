@@ -272,7 +272,99 @@ Finished: SUCCESS
 
 ### Решение 3  
 
+Скрипт компиляции и зарузки в репозиторий bin файла   
+![nexus-pipeline](https://github.com/vyacheslav-PA/netology/blob/79fbe1dfb427b1d19806e1d807dc4c5ccbdbdbc6/sys-admin/automatization/CICD-1/img/img-script-pipeline-raw.png)
 
+Файл загружен в репозиторий   
+![nexus-pipeline-raw-hosted](https://github.com/vyacheslav-PA/netology/blob/79fbe1dfb427b1d19806e1d807dc4c5ccbdbdbc6/sys-admin/automatization/CICD-1/img/img-nexus-build-go.png)   
+
+Вывод консоли после завершения выполнения pipeline   
+
+```
+
+Started by user admin
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/raw-hosted
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Git)
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/vyacheslav-PA/gojenkins.git
+ > git init /var/lib/jenkins/workspace/raw-hosted # timeout=10
+Fetching upstream changes from https://github.com/vyacheslav-PA/gojenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/vyacheslav-PA/gojenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/vyacheslav-PA/gojenkins.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 683c31a61b456e4cbe9488760179560d2675ee66 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 683c31a61b456e4cbe9488760179560d2675ee66 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b main 683c31a61b456e4cbe9488760179560d2675ee66 # timeout=10
+Commit message: "rm files"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
++ go test .
+ok  	github.com/netology-code/sdvps-materials	0.001s
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ go build -o main:v1 main.go
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push)
+[Pipeline] sh
++ curl -u admin:admin http://10.43.122.151:8081/repository/raw-hosted/ --upload-file main:v1 -v
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 10.43.122.151:8081...
+* Connected to 10.43.122.151 (10.43.122.151) port 8081
+* Server auth using Basic with user 'admin'
+> PUT /repository/raw-hosted/main%3av1 HTTP/1.1
+> Host: 10.43.122.151:8081
+> Authorization: Basic YWRtaW46YWRtaW4=
+> User-Agent: curl/8.5.0
+> Accept: */*
+> Content-Length: 2011538
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [65536 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 201 Created
+< Date: Fri, 03 Jan 2025 15:56:09 GMT
+< Server: Nexus/3.75.1-01 (OSS)
+< X-Content-Type-Options: nosniff
+< Content-Security-Policy: sandbox allow-forms allow-modals allow-popups allow-presentation allow-scripts allow-top-navigation
+< X-XSS-Protection: 1; mode=block
+< Content-Length: 0
+< 
+
+100 1964k    0     0  100 1964k      0  58.5M --:--:-- --:--:-- --:--:-- 59.9M
+* Connection #0 to host 10.43.122.151 left intact
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+
+```
 
 ---
 
