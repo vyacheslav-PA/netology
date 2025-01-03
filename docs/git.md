@@ -3,6 +3,7 @@ https://git-scm.com/book/ru/v2/Инструменты-Git-Продвинутое
 ---  
 ### Команды   
 - git clone - скачать репозиторий
+- git remote -v - посмтореть адресс репозитория
 - git remote update, git fetch, 
 - git pull - скачать изменения из репозитория
 - git pull - подтянуть изменения

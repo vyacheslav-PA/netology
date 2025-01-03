@@ -14,7 +14,7 @@
 ### Решение 1   
 
 Jenkins установлен локально
-![jenkins settings](https://github.com/vyacheslav-PA/7-1-ansible-hw/blob/f407bd9edccf5dc1f65bba080a40a7e279c96c71/ansible72/img/ansible-72-1-1.png)
+![jenkins settings](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-settings-git-jenkins.png)
 
 
 ##### Вывод консоли jenkins после успешной сборки проекта 
@@ -107,10 +107,10 @@ Finished: SUCCESS
 
 ```
 nexus развернут в кубернетес
-![kube-nexus]()   
+![kube-nexus](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-nexus.png)   
 
 сборки 7,8,9 завершились удачной сборкой контенера
-![docker-images]()   
+![docker-images](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-docker-images.png)   
 
 ---
 
