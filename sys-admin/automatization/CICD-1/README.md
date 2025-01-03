@@ -14,7 +14,8 @@
 ### Решение 1   
 
 Jenkins установлен локально   
-![jenkins settings](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-settings-git-jenkins.png)   
+![jenkins settings](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-settings-git-jenkins.png)
+![jenkins settings]()   
 
 nexus развернут в кубернетес   
 ![kube-nexus](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-nexus.png)   
