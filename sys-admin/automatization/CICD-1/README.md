@@ -13,11 +13,17 @@
    
 ### Решение 1   
 
-Jenkins установлен локально
-![jenkins settings](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-settings-git-jenkins.png)
+Jenkins установлен локально   
+![jenkins settings](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-settings-git-jenkins.png)   
+
+nexus развернут в кубернетес   
+![kube-nexus](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-nexus.png)   
+
+сборки 7,8,9 завершились удачной сборкой контенера   
+![docker-images](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-docker-images.png)   
 
 
-##### Вывод консоли jenkins после успешной сборки проекта 
+##### Вывод консоли jenkins после успешной сборки всего проекта (#9)
 ```
 Started by user admin
 Running as SYSTEM
@@ -105,12 +111,8 @@ v9: digest: sha256:3a8f1cf0daf7fade5cd5901e0e134d72486fcb1dcbccfcceb1c5dcbec0da3
 Removing login credentials for https://index.docker.io/v1/
 Finished: SUCCESS
 
-```
-nexus развернут в кубернетес
-![kube-nexus](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-nexus.png)   
+```   
 
-сборки 7,8,9 завершились удачной сборкой контенера
-![docker-images](https://github.com/vyacheslav-PA/netology/blob/a95dd095d169e471fe3bc933ae47df14ce5b40ff/sys-admin/automatization/CICD-1/img/img-docker-images.png)   
 
 ---
 
