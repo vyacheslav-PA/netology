@@ -2,6 +2,7 @@ https://git-scm.com/book/ru/v2/Инструменты-Git-Продвинутое
 
 ---  
 ### Команды   
+- git remote -v - посмотреть подключенные репозитории
 - git clone - скачать репозиторий
 - git remote -v - посмтореть адресс репозитория
 - git remote update, git fetch, 

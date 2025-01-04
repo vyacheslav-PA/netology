@@ -17,7 +17,7 @@
 ### Решение 1   
 
 Gitlab развернут в ya cloud, runner запущен
-![runner gitlab]() 
+![runner gitlab](https://github.com/vyacheslav-PA/netology/blob/9b48f820d3ca056757a7bcff861b25710e6cc0ee/sys-admin/automatization/gitlab/img/img-gitlab-runner.png) 
 
 config.toml   
 
@@ -97,7 +97,7 @@ build:
 
  ```
  
-![pipeline gitlab]() 
+![pipeline gitlab](https://github.com/vyacheslav-PA/netology/blob/9b48f820d3ca056757a7bcff861b25710e6cc0ee/sys-admin/automatization/gitlab/img/img-gitlab-pipeline.png) 
 
 
 ---
