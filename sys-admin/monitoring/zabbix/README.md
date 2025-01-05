@@ -19,7 +19,7 @@
 ### Решение 1   
 
 1.Страница авторизации в zabbix
-![admin]()   
+![admin](https://github.com/vyacheslav-PA/netology/blob/c1fdc19fa3422985fee1655de9dffdf6806d6fd8/sys-admin/monitoring/zabbix/img/img-zabbix-admin.png)   
 
 2.Команды для установки Zabbix Server и Zabbix Web Server
 
@@ -61,13 +61,13 @@
 
 ### Решение 2   
 1.Список подключеных хостов
-![zabbix hosts]()   
+![zabbix hosts](https://github.com/vyacheslav-PA/netology/blob/c1fdc19fa3422985fee1655de9dffdf6806d6fd8/sys-admin/monitoring/zabbix/img/img-zabbix-hosts.png)   
 
 2.Логфайл zabbix-agent
-![log]()   
+![log](https://github.com/vyacheslav-PA/netology/blob/c1fdc19fa3422985fee1655de9dffdf6806d6fd8/sys-admin/monitoring/zabbix/img/img-zabbix-log.png)   
 
 3.latest data
-![latest data]()  
+![latest data](https://github.com/vyacheslav-PA/netology/blob/c1fdc19fa3422985fee1655de9dffdf6806d6fd8/sys-admin/monitoring/zabbix/img/img-zabbix-latestdata.png)  
 
 4.команды для установки Zabbix Agent
 
