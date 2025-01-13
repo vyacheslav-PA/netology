@@ -1,0 +1,96 @@
+- hosts: servers_all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: install dependencies # установка зависимостей для docker
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+      loop:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg-agent
+        - software-properties-common
+    - name: add GPG key #ключ репозитория docker
+      apt_key:
+          url: https://download.docker.com/linux/ubuntu/gpg
+          state: present
+    - name: add docker repository to apt # добавить репозиторий
+      apt_repository:
+         repo: deb https://download.docker.com/linux/ubuntu bionic stable
+         state: present
+    - name: install docker # установка docker
+      apt:
+          name: "{{item}}"
+          state: latest
+          update_cache: yes
+      loop:
+         - docker-ce
+         - docker-ce-cli
+         - containerd.io     
+    - name: check docker is active # проверка сервиса docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+    - name: Ensure group "docker" exists # проверка существования пользователя
+      ansible.builtin.group:
+          name: docker
+          state: present
+    - name: adding ubuntu to docker group # добавить пользователя в группу докера
+      user:
+          name: osboxes
+          groups: docker
+          append: yes
+    - name: Pull an image # скачать образ 
+      community.docker.docker_image_pull:
+          name: pwaawp/nginx_ubnt:0.0.1
+    - name: Create a volume # создать том docker
+      community.docker.docker_volume:
+           name: '{{item}}'
+      loop:
+         - www1
+         - www2 
+         - www3
+         - logs_nginx
+    - name: Copy files. # копировать index1
+      copy:
+         src: '/home/pwa/git/ms/ansible/www/1/index.html'
+         dest: '/var/lib/docker/volumes/www1/_data' 
+    - name: Copy files. # копировать index2
+      copy:
+         src: '/home/pwa/git/ms/ansible/www/2/index.html'
+         dest: '/var/lib/docker/volumes/www2/_data' 
+    - name: Copy files. # копировать index3
+      copy:
+         src: '/home/pwa/git/ms/ansible/www/3/index.html'
+         dest: '/var/lib/docker/volumes/www3/_data'    
+    - name: Create a data container # создать контейнер докер nginx1
+      community.docker.docker_container:
+         name: nginx1
+         image: pwaawp/nginx_ubnt:0.0.1 
+         published_ports: 
+         - 8081:80
+         volumes:
+         - www1:/var/www/html
+         - logs_nginx:/var/log/nginx
+    - name: Create a data container # создать контейнер докер nginx2
+      community.docker.docker_container:
+         name: nginx2
+         image: pwaawp/nginx_ubnt:0.0.1 
+         published_ports: 
+         - 8082:80
+         volumes:
+         - www2:/var/www/html
+         - logs_nginx:/var/log/nginx
+    - name: Create a data container # создать контейнер докер nginx3
+      community.docker.docker_container:
+         name: nginx3
+         image: pwaawp/nginx_ubnt:0.0.1 
+         published_ports: 
+         - 8083:80
+         volumes:
+         - www3:/var/www/html
+         - logs_nginx:/var/log/nginx         
