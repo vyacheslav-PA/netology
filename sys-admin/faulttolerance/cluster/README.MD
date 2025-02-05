@@ -25,12 +25,12 @@ listen web_tcp
 ```   
 #### Снимок экрана с запросами к балансировщику
    
-![balancing]()
+![balancing](https://github.com/vyacheslav-PA/netology/blob/1639f4ad41a6206f0b01f8481a9ba794aefcf779/sys-admin/faulttolerance/cluster/img/img-haproxy-1-1.png)
    
 
 ---
    
-### Задание 2
+### Задание 2   
 - Запустите три simple python сервера на своей виртуальной машине на разных портах
 - Настройте балансировку Weighted Round Robin на 7 уровне, чтобы первый сервер имел вес 2, второй - 3, а третий - 4
 - HAproxy должен балансировать только тот http-трафик, который адресован домену example.local
@@ -58,6 +58,10 @@ backend web_servers    # секция бэкенд
 
 ```
    
+#### Снимок экрана с запросами к балансировщику
+   
+![balancing](https://github.com/vyacheslav-PA/netology/blob/1639f4ad41a6206f0b01f8481a9ba794aefcf779/sys-admin/faulttolerance/cluster/img/img-haproxy-1-2.png)   
+
 ---
 
 ## Задания со звёздочкой*
