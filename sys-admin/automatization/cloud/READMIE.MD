@@ -228,11 +228,12 @@ resource "local_file" "inventory" {
               dest: /var/www/
 
 ```
-###### Выполнение playbook
+#### Выполнение playbook
 ![playbook](https://github.com/vyacheslav-PA/netology/blob/88abdf607696a5af931af2c314e6af92c2d546c8/sys-admin/automatization/cloud/terraform/img/img-terraform-1.png)   
 
-
-###### сервер доступен
+#### ВМ создана
+![playbook]()   
+#### сервер доступен
 ![playbook](https://github.com/vyacheslav-PA/netology/blob/88abdf607696a5af931af2c314e6af92c2d546c8/sys-admin/automatization/cloud/terraform/img/img-nginx-1.png)   
 
 ---
