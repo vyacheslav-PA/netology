@@ -172,11 +172,11 @@ resource "local_file" "inventory" {
 
 #### *2. Скриншот статуса балансировщика и целевой группы.*   
 
-![балансировщик]()
+![балансировщик](https://github.com/vyacheslav-PA/netology/blob/c7b1932fa22585e59f9329dcaca0a8ccbf00a78b/sys-admin/faulttolerance/cloud/img/img-balancer-1.png)
 
 #### *3. Скриншот страницы, которая открылась при запросе IP-адреса балансировщика.*   
 
-![страница браузера]()
+![страница браузера](https://github.com/vyacheslav-PA/netology/blob/c7b1932fa22585e59f9329dcaca0a8ccbf00a78b/sys-admin/faulttolerance/cloud/img/img-browser-1.png)
 
 ---
 
