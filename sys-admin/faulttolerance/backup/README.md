@@ -12,7 +12,7 @@
 ### Решение 1   
 
 ---
-![rsync1]()
+![rsync1](https://github.com/vyacheslav-PA/netology/blob/fe5677dff1595cd619cdcd8ccde3d463be6bd9db/sys-admin/faulttolerance/backup/img/img-rsync-1.png)
 
 ### Задание 2
 - Написать скрипт и настроить задачу на регулярное резервное копирование домашней директории пользователя с помощью rsync и cron.
@@ -21,10 +21,10 @@
 - Резервная копия размещается локально, в директории `/tmp/backup`
 - На проверку направить файл crontab и скриншот с результатом работы утилиты.
 
-### Решение    
+### Решение 2    
 
 
-![cron]()
+![cron](https://github.com/vyacheslav-PA/netology/blob/fe5677dff1595cd619cdcd8ccde3d463be6bd9db/sys-admin/faulttolerance/backup/img/img-rsync-crontab-1.png)
 ---
 
 ## Задания со звёздочкой*
