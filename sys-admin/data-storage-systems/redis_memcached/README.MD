@@ -21,7 +21,7 @@
 
 ### Решение 2   
 
-![memcached]()
+![memcached](https://github.com/vyacheslav-PA/netology/blob/becef1a16aa4498d70a1b9e3d167d91eb061cbdd/sys-admin/data-storage-systems/redis_memcached/img/img-memcache-1.png)
 
 ---
 
@@ -33,7 +33,7 @@
 
 ### Решение 3   
 
-![memcached-2]()
+![memcached-2](https://github.com/vyacheslav-PA/netology/blob/becef1a16aa4498d70a1b9e3d167d91eb061cbdd/sys-admin/data-storage-systems/redis_memcached/img/img-memcache-2.png)
 
 ---
 
@@ -43,7 +43,8 @@
 
 *Через redis-cli достаньте все записанные ключи и значения из базы, приведите скриншот этой операции.*
 
-![memcached-2]()  
+![memcached-2](https://github.com/vyacheslav-PA/netology/blob/becef1a16aa4498d70a1b9e3d167d91eb061cbdd/sys-admin/data-storage-systems/redis_memcached/img/img-redis-1-get-key.png)   
+
 ---
 
 ## Дополнительные задания (со звёздочкой*)
@@ -54,3 +55,6 @@
 Запишите в Redis ключ key5 со значением типа "int" равным числу 5. Увеличьте его на 5, чтобы в итоге в значении лежало число 10.  
 
 *Приведите скриншот, где будут проделаны все операции и будет видно, что значение key5 стало равно 10.*
+### Решение 5*   
+
+![incremet](https://github.com/vyacheslav-PA/netology/blob/becef1a16aa4498d70a1b9e3d167d91eb061cbdd/sys-admin/data-storage-systems/redis_memcached/img/img-redis-2-incr.png)
