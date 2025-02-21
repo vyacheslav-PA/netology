@@ -45,6 +45,7 @@ $ pip install pika
 
 ![producer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-prod-1.png)   
 Скрипт обрабатывает сообщения из очереди:   
+
 ![consumer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-consumer-1.png)   
 
 ---
@@ -83,15 +84,20 @@ $ rabbitmqadmin get queue='hello'
 *Приложите скриншот результата работы второго скрипта.*
 
 ### Решение 3
-Две машины в ожном кластере:   
+Две машины в одном кластере:   
+
 ![cluster_status-0](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-0.png)   
 cluster status rabbit1:   
+
 ![cluster_status-1](https://github.com/vyacheslav-PA/netology/blob/ed1c078c0b241422d1201e24a9a065e405bebd34/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-1.png)   
-cluster status rabbit1:   
+cluster status rabbit2:   
+
 ![cluster_status-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-2.png)   
 очередь ноды 1:   
+
 ![get_queue-1](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-1.png)   
 очередь ноды 2:   
+
 ![get_queue-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-2.png)    
 
 При отключении одной из нод вторя продолжает работать
