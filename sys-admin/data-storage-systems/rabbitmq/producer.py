@@ -7,9 +7,9 @@ def producer(i,ip):
     parameters = pika.ConnectionParameters(ip, credentials=credentials)
     connection = pika.BlockingConnection(parameters)
     channel = connection.channel()
+    channel.queue_declare(queue='hello')
     for i in range(0,i):
-        channel.queue_declare(queue='hello')
         channel.basic_publish(exchange='', routing_key='hello', body="hello {i}")
         print(i)
     connection.close()
-producer(5000,'192.168.1.107')
+producer(500000,'192.168.1.107')
