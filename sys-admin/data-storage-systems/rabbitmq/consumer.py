@@ -13,4 +13,5 @@ def consumer(ip):
     # channel.basic_consume(callback, queue='hello', no_ack=True)
     channel.basic_consume( 'hello', callback, auto_ack=True)
     channel.start_consuming()
+# if __name__== 'main':
 consumer('192.168.1.102')
