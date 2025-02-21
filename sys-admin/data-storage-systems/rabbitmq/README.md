@@ -41,9 +41,11 @@ $ pip install pika
 
 
 ### Решение 2
+Очередь в веб-интерфейсе:   
 
-![producer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-prod-1.png)
-![consumer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-consumer-1.png)
+![producer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-prod-1.png)   
+Скрипт обрабатывает сообщения из очереди:   
+![consumer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-consumer-1.png)   
 
 ---
 
@@ -81,12 +83,18 @@ $ rabbitmqadmin get queue='hello'
 *Приложите скриншот результата работы второго скрипта.*
 
 ### Решение 3
-![cluster_status-0](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-0.png)
-![cluster_status-1]()
-![cluster_status-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-2.png)
-![get_queue-1](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-1.png)
-![get_queue-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-2.png)
+Две машины в ожном кластере:   
+![cluster_status-0](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-0.png)   
+cluster status rabbit1:   
+![cluster_status-1](https://github.com/vyacheslav-PA/netology/blob/ed1c078c0b241422d1201e24a9a065e405bebd34/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-1.png)   
+cluster status rabbit1:   
+![cluster_status-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-2.png)   
+очередь ноды 1:   
+![get_queue-1](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-1.png)   
+очередь ноды 2:   
+![get_queue-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-2.png)    
 
+При отключении одной из нод вторя продолжает работать
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
