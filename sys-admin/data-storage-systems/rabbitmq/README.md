@@ -12,8 +12,9 @@
 
 
 ### Решение 1
+Веб-интерфейс RabbitMQ:   
 
-![rabbit]()
+![rabbit](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-1.png)
 
 ---
 
@@ -41,8 +42,8 @@ $ pip install pika
 
 ### Решение 2
 
-![producer]()
-![consumer]()
+![producer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-prod-1.png)
+![consumer](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-consumer-1.png)
 
 ---
 
@@ -80,11 +81,11 @@ $ rabbitmqadmin get queue='hello'
 *Приложите скриншот результата работы второго скрипта.*
 
 ### Решение 3
-![cluster_status-0]()
+![cluster_status-0](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-0.png)
 ![cluster_status-1]()
-![cluster_status-2]()
-![get_queue-1]()
-![get_queue-2]()
+![cluster_status-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-cluster-2.png)
+![get_queue-1](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-1.png)
+![get_queue-2](https://github.com/vyacheslav-PA/netology/blob/a5e1306437e3c9977ef718724ab9adcea58dd189/sys-admin/data-storage-systems/rabbitmq/img/img-rabbit-get_queue-2.png)
 
 
 ## Дополнительные задания (со звёздочкой*)
