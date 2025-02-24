@@ -33,16 +33,16 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 #### CREATE USER 'sys_temp'@'%' IDENTIFIED BY 'password'; - создать учетную запись пользователя
 
-![create user]()
+![create user](https://github.com/vyacheslav-PA/netology/blob/5013008f3a53c14bc7c57bd10fec49622d1c3436/sys-admin/database/ddl-dml/img/img-create_user-1.png)
 
 #### SHOW GRANTS FOR sys_temp; - просмотр прав доступа для пользователя sys_temp
 
-![show grants]()
+![show grants](https://github.com/vyacheslav-PA/netology/blob/5013008f3a53c14bc7c57bd10fec49622d1c3436/sys-admin/database/ddl-dml/img/img-grants-1.png)
 
 
 #### SHOW TABLES; - просмотр таблиц БД
 
-![show tables]()
+![show tables](https://github.com/vyacheslav-PA/netology/blob/5013008f3a53c14bc7c57bd10fec49622d1c3436/sys-admin/database/ddl-dml/img/img-tables-1.png)
 
 
 
