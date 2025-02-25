@@ -16,7 +16,7 @@ SELECT DISTINCT district
     FROM address
 WHERE LEFT(district,1) = 'K' AND  right(district,1) = "a" AND district NOT LIKE('% %');
 ```
-![select district]()
+![select district](https://github.com/vyacheslav-PA/netology/blob/eb7a339ae74d9b572d71bfd1ff20cdb621bc6eae/sys-admin/database/sql1/img/image-select-disrtict-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ SELECT *
 WHERE amount >10   AND (CAST(payment_date AS DATE)) >= CAST('2005-06-15' AS DATE) AND (CAST(payment_date AS DATE)) <= CAST('2005-06-18' AS DATE);
 ```
 
-![select payments]()
+![select payments](https://github.com/vyacheslav-PA/netology/blob/eb7a339ae74d9b572d71bfd1ff20cdb621bc6eae/sys-admin/database/sql1/img/img-select-payment-date-1.png)
 
 ---
 
@@ -53,7 +53,7 @@ ORDER BY rental_date DESC
 LIMIT 5;
 ```
 
-![last 5 rental]()
+![last 5 rental](https://github.com/vyacheslav-PA/netology/blob/eb7a339ae74d9b572d71bfd1ff20cdb621bc6eae/sys-admin/database/sql1/img/img-5-last-rental-1.png)
 
 ---
 
@@ -75,7 +75,7 @@ SELECT REPLACE(LOWER(first_name),'ll','pp') as 'first name', LOWER(first_name) a
 	FROM customer c 
 WHERE first_name IN ('Kelly','Willie')
 ```
-![lower+replace]()
+![lower+replace](https://github.com/vyacheslav-PA/netology/blob/eb7a339ae74d9b572d71bfd1ff20cdb621bc6eae/sys-admin/database/sql1/img/img-replace-1.png)
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
@@ -92,7 +92,7 @@ SELECT email, LEFT(email,POSITION('@' IN email)-1) , RIGHT(email,(CHAR_LENGTH(em
 	FROM customer
 ```
 
-![split email]()
+![split email](https://github.com/vyacheslav-PA/netology/blob/eb7a339ae74d9b572d71bfd1ff20cdb621bc6eae/sys-admin/database/sql1/img/img-split-email-1.png)
 
 ---
 
@@ -109,4 +109,4 @@ LOWER(RIGHT(RIGHT(email,(CHAR_LENGTH(email) - POSITION('@' IN email))),(CHAR_LEN
 	FROM customer
 ```
 
-![split email-2 ]()
+![split email-2 ](https://github.com/vyacheslav-PA/netology/blob/eb7a339ae74d9b572d71bfd1ff20cdb621bc6eae/sys-admin/database/sql1/img/img-split-email-2.png)
