@@ -24,7 +24,7 @@ JOIN city c2 ON c2.city_id = a.city_id
 GROUP BY s.store_id, s2.last_name, s2.first_name, c2.city 
 HAVING clients>300
 ```
-![store>300clients]()
+![store>300clients](https://github.com/vyacheslav-PA/netology/blob/d39362217b022e86738e64317abbc821134788e4/sys-admin/database/sql2/img/img-t1-clients-1.png)
 
 ---
 
@@ -42,7 +42,7 @@ SELECT  COUNT(*)
 WHERE length >(SELECT AVG(length)
 	FROM film)
 ```
-![length]()
+![length](https://github.com/vyacheslav-PA/netology/blob/d39362217b022e86738e64317abbc821134788e4/sys-admin/database/sql2/img/img-t2-average-1.png)
 
 ---
 
@@ -63,7 +63,7 @@ ORDER BY summ DESC
 LIMIT 1;
 ```
 
-![summ payment]()
+![summ payment](https://github.com/vyacheslav-PA/netology/blob/d39362217b022e86738e64317abbc821134788e4/sys-admin/database/sql2/img/img-t3-max-summ-rent-1.png)
 
 ---
 
@@ -88,7 +88,7 @@ SELECT  s.first_name ,s.last_name , COUNT(*) as 'количество прода
 JOIN staff s ON s.staff_id =p.staff_id 
 GROUP BY p.staff_id 
 ```
-![count pay]()
+![count pay](https://github.com/vyacheslav-PA/netology/blob/d39362217b022e86738e64317abbc821134788e4/sys-admin/database/sql2/img/img-t4-count-payment-1.png)
 
 ---
 
@@ -108,4 +108,4 @@ JOIN film f ON f.film_id = i.film_id
 where r.rental_id IS NULL
 ```
 
-![movies without rent]()
+![movies without rent](https://github.com/vyacheslav-PA/netology/blob/d39362217b022e86738e64317abbc821134788e4/sys-admin/database/sql2/img/img-t5-no-rent-1.png)
