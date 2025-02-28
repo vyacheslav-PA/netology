@@ -14,7 +14,7 @@ SELECT ((SUM(index_length)/ sum(data_length))*100) as '%'
 WHERE table_schema = 'sakila';
 ```
 
-![percent]()
+![percent](https://github.com/vyacheslav-PA/netology/blob/1c722c9e23168b19f73f6e8926061f90e305c326/sys-admin/database/index/img/img-t1-percent-1.png)
 
 ---
 
