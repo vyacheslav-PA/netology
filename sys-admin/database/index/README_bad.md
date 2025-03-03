@@ -136,6 +136,27 @@ where p.payment_date >= '2005-07-30' and p.payment_date < DATE_ADD('2005-07-30',
                         -> Single-row covering index lookup on i using PRIMARY (inventory_id = r.inventory_id)  (cost=0.246 rows=1) (actual time=0.00172..0.00174 rows=1 loops=642)
                    
 ```
+
+```sql
+EXPLAIN analyze
+select distinct concat(c.last_name, ' ', c.first_name) as name, sum(p.amount)
+	FROM customer c
+JOIN rental r ON c.customer_id = r.customer_id
+JOIN payment p ON r.rental_date = p.payment_date  
+where p.payment_date >= '2005-07-30' and p.payment_date < DATE_ADD('2005-07-30', INTERVAL 1 DAY)
+GROUP BY c.customer_id
+                        
+-> Sort with duplicate removal: `name`, `sum(p.amount)`  (actual time=6.35..6.37 rows=391 loops=1)
+    -> Table scan on <temporary>  (actual time=6.15..6.19 rows=391 loops=1)
+        -> Aggregate using temporary table  (actual time=6.15..6.15 rows=391 loops=1)
+            -> Nested loop inner join  (cost=575 rows=645) (actual time=0.0686..5.11 rows=642 loops=1)
+                -> Nested loop inner join  (cost=349 rows=634) (actual time=0.0583..2.25 rows=634 loops=1)
+                    -> Filter: ((r.rental_date >= TIMESTAMP'2005-07-30 00:00:00') and (r.rental_date < <cache>(('2005-07-30' + interval 1 day))))  (cost=127 rows=634) (actual time=0.0508..0.667 rows=634 loops=1)
+                        -> Covering index range scan on r using rental_date over ('2005-07-30 00:00:00' <= rental_date < '2005-07-31 00:00:00')  (cost=127 rows=634) (actual time=0.0492..0.298 rows=634 loops=1)
+                    -> Single-row index lookup on c using PRIMARY (customer_id = r.customer_id)  (cost=0.25 rows=1) (actual time=0.00226..0.00229 rows=1 loops=634)
+                -> Index lookup on p using index_date (payment_date = r.rental_date)  (cost=0.254 rows=1.02) (actual time=0.0035..0.00418 rows=1.01 loops=634)
+
+```
 При использовании индекса на 10000 запросов с оконной функции затрачено 35.9 секунд, среднее время - 3.5 микросекунд
 Для запроса с использование join время выполнения 10000 запросов составляет 25.9 секунд, среднее значение 2.3 микросекунд
 
