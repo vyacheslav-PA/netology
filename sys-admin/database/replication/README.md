@@ -26,7 +26,7 @@
 
 статус SLAVE ноды   
 
-![slave]()
+![slave](https://github.com/vyacheslav-PA/netology/blob/e002e5a72e2f9954846a3e95a3b1c244f423d416/sys-admin/database/replication/img/img-status-slave-1.png)
 ---
 
 ## Дополнительные задания (со звёздочкой*)
