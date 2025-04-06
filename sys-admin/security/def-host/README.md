@@ -10,7 +10,7 @@ _В качестве ответа пришлите снимки экрана д�
 
 ### Решение 1
 
-![ecryptfs]()
+![ecryptfs](https://github.com/vyacheslav-PA/netology/blob/ffa6f4cac9ec3b9ec7aec7de0eefb50c03b9cee2/sys-admin/security/def-host/img/img-cryptfs-1.png)
 
 ---
 
@@ -24,7 +24,7 @@ _В качестве ответа пришлите снимки экрана с 
 
 ### Решение 2
 
-![luks]()
+![luks](https://github.com/vyacheslav-PA/netology/blob/ffa6f4cac9ec3b9ec7aec7de0eefb50c03b9cee2/sys-admin/security/def-host/img/img-luks--1.png)
 
 ---
 
