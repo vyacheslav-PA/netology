@@ -1,0 +1,5 @@
+python3 -m venv api
+source api/bin/activate
+pip install -r requirements.txt
+docker build -t decoder .
+docker run -it -p 8000:8000 --rm --name api_decoder pwaawp/api_decoder_token:0.0.1
