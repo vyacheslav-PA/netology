@@ -21,8 +21,15 @@
                 return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
                 }).join(''));
                 let result = JSON.stringify(jsonPayload);
-                result=result.replace(/,/g,',\r\n').replace(/\\/g,'');    
+                result=result.replace(/,/g,',\r\n').replace(/[\\"{},]/g,'');  
                 document.getElementById('DecodeToken').value = result ;
+            // let token=document.getElementById('inserttoken').value
+            // let tokenParts = token.split('.'); 
+            // // let decodedHeader = JSON.parse(atob(tokenParts[0])); 
+            // let decodedPayload = JSON.parse(atob(tokenParts[1])); 
+            // let result = JSON.stringify(decodedPayload);
+            // result=result.replace(/,/g,',\r\n').replace(/[\\"{},]/g,''); 
+            // document.getElementById('DecodeToken').value = result ;
         } catch (error) {
             alert(error.message)
         }
@@ -51,6 +58,6 @@ button {
 textarea{
   border: 2px solid #464646;
   border-radius: 4px;
-  resize: none;
+  /* resize: none; */
 }
 </style>
